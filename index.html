@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Simple Router</title>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script src="./router.js"></script>
+        <script src="./redirections.js"></script>
+        <script>
+            Object.entries(redirects).forEach(([name, url]) => {
+                template(name, redirectFactory(url));
+                route(`/${name}`, name);
+            });
+        </script>
+    </body>
+</html>
