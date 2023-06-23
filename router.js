@@ -27,7 +27,7 @@ const about = () => {
 
 const redirectFactory = (url) => {
   return () => {
-    const waitingTime = 5;
+    const waitingTime = 1;
     const meta = document.createElement("meta");
     meta.setAttribute("http-equiv", "refresh");
     meta.setAttribute("content", `${waitingTime};URL=${url}`);
